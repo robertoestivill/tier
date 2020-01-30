@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/vehicle_map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/vehicle_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/size_l"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vehicle_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_m"
+        android:background="@color/errorBackground"
+        android:gravity="center"
+        android:padding="@dimen/size_l"
+        android:textColor="@color/errorForeground"
+        android:textSize="@dimen/text_l"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/vehicle_update_button" />
+
+    <Button
+        android:id="@+id/vehicle_update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_m"
+        android:backgroundTint="@color/colorAccent"
+        android:padding="@dimen/size_xl"
+        android:text="@string/update_map"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_l"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
