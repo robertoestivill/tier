@@ -1,7 +1,7 @@
 object Version {
 
     const val androidLiveData = "1.1.1"
-    const val androidPlugin = "3.5.0"
+    const val androidPlugin = "4.0.0-beta04"
     const val androidViewModel = "1.1.1"
 
     const val androidxAppCompat = "1.0.2"
